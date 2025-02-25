@@ -1,8 +1,20 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Aboutkravmaga from "./pages/Aboutkravmaga";
+import Training from "./pages/Training";
+import Instructor from "./pages/Instructor";
+
+// import NotFound from "./pages/NotFound";
+
 function App() {
   return (
-    <>
-      <h1 className="text-[20px] text-red-700">Hello World</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/aboutKrav-maga" element={<Aboutkravmaga />} />
+      <Route path="/training" element={<Training />} />
+      <Route path="/instructor" element={<Instructor />} />
+      {/* <Route path="*" element={<NotFound />} /> */}
+    </Routes>
   );
 }
 
