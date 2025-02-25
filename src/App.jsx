@@ -4,8 +4,6 @@ import Aboutkravmaga from "./pages/Aboutkravmaga";
 import Training from "./pages/Training";
 import Instructor from "./pages/Instructor";
 
-// import NotFound from "./pages/NotFound";
-
 function App() {
   return (
     <Routes>
@@ -13,7 +11,6 @@ function App() {
       <Route path="/aboutKrav-maga" element={<Aboutkravmaga />} />
       <Route path="/training" element={<Training />} />
       <Route path="/instructor" element={<Instructor />} />
-      {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   );
 }
