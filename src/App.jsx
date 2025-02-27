@@ -20,7 +20,7 @@ const routes = [
     ),
     children: [
       { path: "/", element: <Home /> },
-      { path: "/aboutKrav-maga", element: <Aboutkravmaga /> },
+      { path: "/about", element: <Aboutkravmaga /> },
       { path: "/training", element: <Training /> },
       { path: "/instructor", element: <Instructor /> },
     ],
