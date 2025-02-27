@@ -14,7 +14,7 @@ function Navbar() {
         Home
       </NavLink>
       <NavLink
-        to="/aboutKrav-maga"
+        to="/about"
         className={({ isActive }) =>
           isActive
             ? "text-[#E80D0D] px-3 py-1 lg:px-4 lg:py-2"
