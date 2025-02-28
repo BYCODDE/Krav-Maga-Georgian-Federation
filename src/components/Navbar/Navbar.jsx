@@ -3,7 +3,7 @@ import { navLinks } from "../../lib/navlinks";
 
 function Navbar() {
   return (
-    <nav className="flex gap-2 justify-end w-full text-[20px]">
+    <nav className="md:flex gap-2 justify-end w-full text-[20px] hidden">
       {navLinks.map((link) => (
         <NavLink
           key={link.id}
