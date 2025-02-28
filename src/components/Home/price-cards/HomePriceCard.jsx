@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { useGetHomePriceCards } from "../../../hooks/useGetHomePriceCards";
 import ErrorDisplay from "../../ErrorDisplay";
 import PriceCardsContent from "./PriceCardsContent";
 import { PriceCardsContentSkeleton } from "./PriceCardsSkeleton";
+import ModalPortal from "../../ModalPortal";
+import SignUpModal from "./SignUpModal";
 function HomePriceCard() {
   const { data, isError, isLoading, error } = useGetHomePriceCards();
-  console.log(data);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   if (isLoading) {
     return <PriceCardsContentSkeleton />;
   }
@@ -26,9 +30,16 @@ function HomePriceCard() {
             main_title={card.main_title.en}
             timing={card.timing.en}
             price={card.price}
+            setIsModalOpen={setIsModalOpen}
+            isModalOpen={isModalOpen}
           />
         ))}
       </div>
+      {isModalOpen && (
+        <ModalPortal>
+          <SignUpModal setIsModalOpen={setIsModalOpen} />
+        </ModalPortal>
+      )}
     </div>
   );
 }

@@ -7,3 +7,13 @@ export async function getHomePriceCards() {
   }
   return data;
 }
+
+export async function putSignUp({ name, username, age, phone }) {
+  const { data, error } = await supabase
+    .from("futureStudents")
+    .insert([{ name: name, username: username, age: age, phone: phone }]);
+  if (error) {
+    throw new Error(error.message);
+  }
+  return data;
+}

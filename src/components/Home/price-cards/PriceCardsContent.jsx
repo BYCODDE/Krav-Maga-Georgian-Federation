@@ -6,11 +6,11 @@ function PriceCardsContent({
   instructor,
   price,
   img,
+  setIsModalOpen,
+  isModalOpen,
 }) {
   return (
-    <div
-      className="bg-[#A9A9A9] w-full h-fit max-w-[400px] p-4 rounded-3xl my-5"
-    >
+    <div className="bg-[#A9A9A9] w-full h-fit max-w-[400px] p-4 rounded-3xl my-5">
       <div>
         <img
           src={img}
@@ -26,7 +26,10 @@ function PriceCardsContent({
         <h3 className="text-xs">Instructor: {instructor}</h3>
       </div>
       <div className="pt-3 flex items-center justify-between gap-3">
-        <button className="bg-white text-black py-2 px-3 rounded-2xl text-xs">
+        <button
+          onClick={() => setIsModalOpen(() => !isModalOpen)}
+          className="bg-white text-black py-2 px-3 rounded-2xl text-xs"
+        >
           Sign up
         </button>
         <h2 className="text-white font-bold">{price} GEL</h2>
