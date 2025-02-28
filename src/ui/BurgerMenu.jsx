@@ -9,7 +9,6 @@ function BurgerMenu() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const closeMenu = (e) => {
-    // Close only if clicking on the background overlay
     if (e.target.id === "menu-overlay") {
       setIsOpen(false);
     }
@@ -17,12 +16,10 @@ function BurgerMenu() {
 
   return (
     <div className="md:hidden">
-      {/* Burger Button */}
       <button onClick={toggleMenu} className="focus:outline-none text-2xl">
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      {/* Fullscreen Modal Menu */}
       {isOpen && (
         <div
           id="menu-overlay"
@@ -30,7 +27,6 @@ function BurgerMenu() {
           className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
         >
           <div className="w-full bg-white shadow-lg rounded-lg p-6 relative">
-            {/* Close Button */}
             <button
               onClick={toggleMenu}
               className="absolute top-4 right-4 text-2xl"
@@ -38,7 +34,6 @@ function BurgerMenu() {
               <FaTimes />
             </button>
 
-            {/* Navigation Links */}
             <nav className="flex flex-col items-center space-y-4 mt-[20px]">
               {navLinks.map((link) => (
                 <NavLink
