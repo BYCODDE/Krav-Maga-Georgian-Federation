@@ -1,5 +1,11 @@
+import HomePriceCard from "../components/Home/price-cards/HomePriceCard";
+
 function Home() {
-  return <>this is home page!</>;
+  return (
+    <>
+      <HomePriceCard />
+    </>
+  );
 }
 
 export default Home;
