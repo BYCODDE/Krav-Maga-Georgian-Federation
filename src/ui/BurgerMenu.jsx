@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { navLinks } from "../lib/navlinks";
+import { motion, AnimatePresence } from "framer-motion";
 
 function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,35 +21,53 @@ function BurgerMenu() {
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      {isOpen && (
-        <div
-          id="menu-overlay"
-          onClick={closeMenu}
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-        >
-          <div className="w-full bg-white shadow-lg rounded-lg p-6 relative">
-            <button
-              onClick={toggleMenu}
-              className="absolute top-4 right-4 text-2xl"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            id="menu-overlay"
+            onClick={closeMenu}
+            className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div
+              className="flex flex-col justify-center items-center w-full h-full bg-white shadow-xl rounded-lg p-6 relative"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <FaTimes />
-            </button>
+              <button
+                onClick={toggleMenu}
+                className="absolute top-4 right-4 text-3xl text-gray-800"
+              >
+                <FaTimes />
+              </button>
 
-            <nav className="flex flex-col items-center space-y-4 mt-[20px]">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.id}
-                  to={link.path}
-                  onClick={toggleMenu}
-                  className="w-full text-center text-lg py-2 hover:bg-gray-200 transition duration-300 rounded-md"
-                >
-                  {link.name}
-                </NavLink>
-              ))}
-            </nav>
-          </div>
-        </div>
-      )}
+              <motion.nav
+                className="flex flex-col items-center space-y-6 mt-[30px]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }} // Smooth fade-in for items
+              >
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.id}
+                    to={link.path}
+                    onClick={toggleMenu}
+                    className="w-full text-center text-2xl font-semibold py-4 px-6 hover:bg-gray-200 transition-all duration-300 rounded-md"
+                  >
+                    {link.name}
+                  </NavLink>
+                ))}
+              </motion.nav>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
