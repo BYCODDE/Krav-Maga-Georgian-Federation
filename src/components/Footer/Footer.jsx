@@ -20,7 +20,7 @@ function Footer() {
             Address: 2 University St, Tbilisi
           </p>
         </div>
-        <div>
+        <div className="flex flex-col items-center md:block md:flex-row md:items-start">
           <h3 className=" md:text-left text-[15px] lg:text-xl font-semibold mb-4 text-center">
             Follow Us
           </h3>
