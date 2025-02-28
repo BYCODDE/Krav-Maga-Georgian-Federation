@@ -22,15 +22,15 @@ function Footer() {
           </h3>
           <div className="flex gap-0 md:flex-row md:gap-8 flex-col">
             {socialLinks.map((link) => (
-              <Link
+              <a
                 key={link.id}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={` ${link.style}`}
               >
-                {<link.icon />}
-              </Link>
+                <link.icon />
+              </a>
             ))}
           </div>
         </div>
