@@ -51,7 +51,7 @@ function BurgerMenu() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }} // Smooth fade-in for items
+                transition={{ delay: 0.3, duration: 0.5 }}
               >
                 {navLinks.map((link) => (
                   <NavLink
