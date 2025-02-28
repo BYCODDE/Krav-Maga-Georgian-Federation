@@ -6,7 +6,7 @@ import { footerInfo } from "../../lib/footerInfo";
 
 function Footer() {
   return (
-    <footer className="bg-[#c2c2c2] p-8 w-full">
+    <footer className=" p-8 w-full">
       <div className="flex flex-row justify-between items-start gap-8">
         <div className="flex flex-col gap-[20px]">
           <ReusableTitle />
@@ -17,7 +17,7 @@ function Footer() {
           ))}
         </div>
         <div className="flex flex-col items-center md:block md:flex-row md:items-start">
-          <h3 className=" md:text-left text-[15px] lg:text-xl font-semibold mb-4 text-center">
+          <h3 className="font-bebas md:text-left text-[15px] lg:text-xl font-semibold mb-4 text-center">
             Follow Us
           </h3>
           <div className="flex gap-0 md:flex-row md:gap-8 flex-col">

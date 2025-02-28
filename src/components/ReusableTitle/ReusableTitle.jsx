@@ -8,7 +8,9 @@ function ReusableTitle() {
         src="mainLogo.png"
         alt="mainLogo"
       />
-      <h1 className="text-[15px] lg:text-xl font-bold">Krav Maga In Georgia</h1>
+      <h1 className="font-bebas text-[15px] lg:text-xl font-bold">
+        Krav Maga In Georgia
+      </h1>
     </div>
   );
 }

@@ -2,7 +2,19 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ['"Roboto Condensed"', "sans-serif"],
+        bebas: ['"Bebas Neue"', "sans-serif"],
+        oswald: ['"Oswald"', "sans-serif"],
+        montserrat: ['"Montserrat"', "sans-serif"],
+        anton: ['"Anton"', "sans-serif"],
+        exo: ['"Exo 2"', "sans-serif"],
+      },
+      colors: {
+        mainColor: "#c2c2c2",
+      },
+    },
   },
   plugins: [],
 };
