@@ -10,7 +10,7 @@ function Footer() {
       <div className="flex flex-row justify-between items-start gap-8">
         <div>
           <ReusableTitle />
-          <p className="mb-2">Email: info@company.com</p>
+          <p className="mb-2">Email: krav_maga_in_georgia@mail.ru</p>
           <p className="mb-2">Phone: (123) 456-7890</p>
           <p className="mb-2">Address: 2 University St, Tbilisi</p>
         </div>
