@@ -4,12 +4,10 @@ import ReusableTitle from "../ReusableTitle/ReusableTitle";
 
 function Header() {
   return (
-    <header className=" p-8 w-full">
-      <div className="flex flex-row justify-between items-center">
-        <ReusableTitle />
-        <Navbar />
-        <BurgerMenu />
-      </div>
+    <header className="flex flex-row justify-between items-center  w-full">
+      <ReusableTitle />
+      <Navbar />
+      <BurgerMenu />
     </header>
   );
 }

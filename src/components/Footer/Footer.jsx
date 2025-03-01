@@ -1,12 +1,11 @@
 import ReusableTitle from "../ReusableTitle/ReusableTitle";
 
-import { socialLinks } from "../../lib/socialLinks";
-import { Link } from "react-router-dom";
+import { socialLinks } from "../../lib/footerInfo";
 import { footerInfo } from "../../lib/footerInfo";
 
 function Footer() {
   return (
-    <footer className=" p-8 w-full">
+    <footer className="  w-full">
       <div className="flex flex-row justify-between items-start gap-8">
         <div className="flex flex-col gap-[20px]">
           <ReusableTitle />

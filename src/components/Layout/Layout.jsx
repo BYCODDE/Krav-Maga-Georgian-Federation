@@ -8,12 +8,7 @@ function Layout({ children }) {
       <MainContentWrapper>
         <Header />
         <main>{children}</main>
-        <Footer
-          title="Contact Info"
-          size="text-[3rem]"
-          color="text-black"
-          fontWeight="font-bold"
-        />
+        <Footer />
       </MainContentWrapper>
     </div>
   );
