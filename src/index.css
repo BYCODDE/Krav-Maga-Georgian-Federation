@@ -1,7 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
+/* Tailwind Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Fonts using @font-face */
+
+/* Roboto Condensed Font */
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("./fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("./fonts/Roboto_Condensed/RobotoCondensed-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("./fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bebas Neue Font */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Oswald Font */
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald/static/Oswald-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./fonts/Oswald/static/Oswald-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Montserrat Font */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Anton Font */
+@font-face {
+  font-family: "Anton";
+  src: url("./fonts/Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Exo 2 Font */
+@font-face {
+  font-family: "Exo 2";
+  src: url("./fonts/Exo_2/static/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Font Utilities */
+@layer utilities {
+  /* Roboto Condensed */
+  .font-roboto-regular {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+  }
+
+  .font-roboto-medium {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+  }
+
+  .font-roboto-bold {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+  }
+
+  /* Bebas Neue */
+  .font-bebas {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  /* Oswald */
+  .font-oswald-regular {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+  }
+
+  .font-oswald-bold {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+  }
+
+  /* Montserrat */
+  .font-montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+
+  .font-montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  /* Anton */
+  .font-anton {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+  }
+
+  /* Exo 2 */
+  .font-exo-regular {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+  }
+}
