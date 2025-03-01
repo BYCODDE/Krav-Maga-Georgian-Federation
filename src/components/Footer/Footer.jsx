@@ -1,4 +1,4 @@
-import ReusableTitle from "../ReusableTitle/ReusableTitle";
+import ReusableTitle from "../ReusableTitle";
 
 import { socialLinks } from "../../lib/footerInfo";
 import { footerInfo } from "../../lib/footerInfo";
@@ -8,7 +8,10 @@ function Footer() {
     <footer className="  w-full">
       <div className="flex flex-row justify-between items-start gap-8">
         <div className="flex flex-col gap-[20px]">
-          <ReusableTitle />
+          <ReusableTitle
+            img_src={"mainLogo.png"}
+            h1_text={"Krav Maga In Georgia"}
+          />
           {footerInfo.map((info) => (
             <p key={info.id} className={`${info.style}`}>
               {info.info}

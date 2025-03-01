@@ -1,16 +1,14 @@
 import React from "react";
 
-function ReusableTitle() {
+function ReusableTitle({ img_src, h1_text }) {
   return (
     <div className="flex items-center gap-4 w-full ">
       <img
         className="max-w-[30px] lg:max-w-[50px]"
-        src="mainLogo.png"
+        src={img_src}
         alt="mainLogo"
       />
-      <h1 className="font-bebas text-[15px] lg:text-xl font-bold">
-        Krav Maga In Georgia
-      </h1>
+      <h1 className="font-bebas text-[15px] lg:text-xl font-bold">{h1_text}</h1>
     </div>
   );
 }
