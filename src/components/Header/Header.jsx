@@ -1,13 +1,16 @@
+import BurgerMenu from "../../ui/BurgerMenu";
 import Navbar from "../Navbar/Navbar";
-import ReusableTitle from "../ReusableTitle/ReusableTitle";
+import ReusableTitle from "../ReusableTitle";
 
 function Header() {
   return (
-    <header className="bg-[#c2c2c2] p-8 w-full">
-      <div className="flex lg:flex-row items-center justify-center">
-        <ReusableTitle />
-        <Navbar />
-      </div>
+    <header className="flex flex-row justify-between items-center  w-full">
+      <ReusableTitle
+        img_src={"mainLogo.png"}
+        h1_text={"Krav Maga In Georgia"}
+      />
+      <Navbar />
+      <BurgerMenu />
     </header>
   );
 }

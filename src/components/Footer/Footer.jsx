@@ -1,54 +1,39 @@
-import ReusableTitle from "../ReusableTitle/ReusableTitle";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { AiFillTikTok } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
+import ReusableTitle from "../ReusableTitle";
+
+import { socialLinks } from "../../lib/footerInfo";
+import { footerInfo } from "../../lib/footerInfo";
 
 function Footer() {
   return (
-    <footer className="bg-[#c2c2c2] p-8 w-full">
+    <footer className="  w-full">
       <div className="flex flex-row justify-between items-start gap-8">
-        <div>
-          <ReusableTitle />
-          <p className="mb-2">Email: info@company.com</p>
-          <p className="mb-2">Phone: (123) 456-7890</p>
-          <p className="mb-2">Address: 2 University St, Tbilisi</p>
+        <div className="flex flex-col gap-[20px]">
+          <ReusableTitle
+            img_src={"mainLogo.png"}
+            h1_text={"Krav Maga In Georgia"}
+          />
+          {footerInfo.map((info) => (
+            <p key={info.id} className={`${info.style}`}>
+              {info.info}
+            </p>
+          ))}
         </div>
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-          <div className="flex gap-8 text-[20px]">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 px-3 py-1 lg:px-4 lg:py-2  text-3xl"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="https://www.tiktok.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-600 px-3 py-1 lg:px-4 lg:py-2 text-3xl"
-            >
-              <AiFillTikTok />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-pink-500 px-3 py-1 lg:px-4 lg:py-2  text-3xl"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-700 px-3 py-1 lg:px-4 lg:py-2  text-3xl"
-            >
-              <FaLinkedin />
-            </a>
+        <div className="flex flex-col items-center md:block md:flex-row md:items-start">
+          <h3 className="font-bebas md:text-left text-[15px] lg:text-xl font-bold mb-4 text-center">
+            Follow Us
+          </h3>
+          <div className="flex gap-0 md:flex-row md:gap-8 flex-col">
+            {socialLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={` ${link.style}`}
+              >
+                <link.icon />
+              </a>
+            ))}
           </div>
         </div>
       </div>
