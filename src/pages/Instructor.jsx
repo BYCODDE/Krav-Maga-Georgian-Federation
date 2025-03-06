@@ -1,7 +1,11 @@
-
+import InstructorCard from "../components/Instructor/instructorcard/InstructorCard";
 
 function Instructor() {
-  return <div>this is Instructor page!</div>;
+  return (
+    <div>
+      <InstructorCard />
+    </div>
+  );
 }
 
-export default Instructor
+export default Instructor;
