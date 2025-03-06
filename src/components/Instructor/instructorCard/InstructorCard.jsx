@@ -1,13 +1,16 @@
 import React from "react";
 import { useGetInstructorCards } from "../../../hooks/useGetInstructorInfo";
 import SkeletonInsturctor from "../instructorCard/SkeletonInsturctor";
-
+import ErrorDisplay from "../../ErrorDisplay";
 export default function InstructorCard() {
-  const { data, isLoading } = useGetInstructorCards();
+  const { data, isLoading, isError, error } = useGetInstructorCards();
   console.log(data);
 
   if (isLoading) {
     return <SkeletonInsturctor />;
+  }
+  if (isError) {
+    return <ErrorDisplay ErrorMsg={error.message} />;
   }
 
   return (
