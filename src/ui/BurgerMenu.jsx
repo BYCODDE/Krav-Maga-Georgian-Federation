@@ -9,7 +9,7 @@ function BurgerMenu() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden mr-4">
       <button onClick={toggleMenu} className="focus:outline-none text-2xl">
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
