@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { navLinksArray } from "../lib/footerInfo";
+import { useTranslation } from "react-i18next";
 
 const NavLinks = ({ toggleMenu, variant }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       {navLinksArray.map((link) => (
@@ -17,7 +20,7 @@ const NavLinks = ({ toggleMenu, variant }) => {
               : "px-2 py-1 lg:px-2 lg:py-1"
           }
         >
-          {link.name}
+          {t(link.name, { defaultValue: link.name })}
         </NavLink>
       ))}
     </>
