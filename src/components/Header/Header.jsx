@@ -18,6 +18,7 @@ function Header() {
       <div className="flex flex-row gap-5">
         <button onClick={() => i18n.changeLanguage("en")}>🇬🇧 EN</button>
         <button onClick={() => i18n.changeLanguage("ka")}>🇬🇪 KA</button>
+        <button onClick={() => i18n.changeLanguage("ru")}>🇷🇺 RU</button>
       </div>
     </header>
   );
