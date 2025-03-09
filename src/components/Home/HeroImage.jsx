@@ -2,13 +2,16 @@ import React from "react";
 import { useGetHeroImage } from "../../hooks/useGetHeroImage";
 
 const HeroImage = () => {
-  const {data,error,isError,isLoading} = useGetHeroImage()
-  
-  if(isLoading) return <p>Loading</p>
-  if(isError) return <p>{error.message}</p>
+  const { data, error, isError, isLoading } = useGetHeroImage();
+
+  if (isLoading) return <p>Loading</p>;
+  if (isError) return <p>{error.message}</p>;
 
   return (
-    <div className="relative h-screen w-full bg-cover bg-center" style={{ backgroundImage: `url("${data[0].img}")` }}>
+    <div
+      className="relative min-h-[calc(100vh-133px)] w-full bg-cover bg-center"
+      style={{ backgroundImage: `url("${data[0].img}")` }}
+    >
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white px-4">
         <h1 className="text-4xl md:text-6xl font-bold">
           Enhance your skills and master Krav Maga techniques
