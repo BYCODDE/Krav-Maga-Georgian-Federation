@@ -7,6 +7,7 @@ import { Pagination } from "swiper/modules";
 
 export default function FeedbackBox() {
   const { data, isLoading, isError, error } = useGetFeedback();
+  console.log(data, "esaa");
 
   if (isLoading) return <p className="text-center text-gray-600">Loading...</p>;
   if (isError)
@@ -47,9 +48,6 @@ export default function FeedbackBox() {
               <div className="flex-shrink-0 w-full min-h-[200px] border border-gray-300 p-6 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
                 <div className="mb-4 flex items-start gap-4">
                   <img src="/comma.png" alt="" className="w-6 h-6" />
-                  <p className="text-base md:text-lg text-gray-700 overflow-y-auto">
-                    {feedback.quote}
-                  </p>
                 </div>
                 <div className="flex items-start gap-4 ">
                   <div className="flex-shrink-0 w-14 h-14 rounded-full overflow-hidden border-2 border-gray-300">
@@ -61,10 +59,10 @@ export default function FeedbackBox() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-semibold text-gray-900 truncate">
-                      {feedback.user_name}
+                      {feedback.user_name.en}
                     </h3>
                     <p className="text-gray-500 text-sm overflow-y-auto max-h-20 break-words">
-                      {feedback.review}
+                      {feedback.review.en}
                     </p>
                   </div>
                 </div>
