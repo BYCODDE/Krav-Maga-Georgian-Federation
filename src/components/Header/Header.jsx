@@ -10,7 +10,7 @@ function Header() {
     <header className="flex flex-row justify-between items-center  w-full mb-4">
       <ReusableTitle
         img_src={"mainLogo.png"}
-        h1_text={t("krav", { defaultValue: "Krav Maga In Georgia" })}
+        h1_text={t("krav", { defaultValue: "Krav Maga Georgian Federation" })}
       />
       <Navbar />
       <BurgerMenu />
