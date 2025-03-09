@@ -6,26 +6,17 @@ import { FaLinkedin } from "react-icons/fa";
 export const footerInfo = [
   {
     id: 1,
-    info: "Email: krav_maga_in_georgia@mail.ru",
-    style: "font-oswald text-[13px] lg:text-[20px]",
-  },
-  {
-    id: 2,
-    info: "Phone: (123) 456-7890",
-    style: "font-oswald text-[13px] lg:text-[20px]",
-  },
-  {
-    id: 3,
-    info: " Address: 2 University St, Tbilisi",
-    style: "font-oswald text-[13px] lg:text-[20px]",
+    gmail: "gmail",
+    phone: "phone",
+    address: "address",
+    style: "font-oswald text-[13px] lg:text-[20px] font-bold",
   },
 ];
-
 export const navLinksArray = [
-  { id: 1, path: "/", name: "Home" },
-  { id: 2, path: "/about", name: "About Krav-Maga" },
-  { id: 3, path: "/training", name: "Training" },
-  { id: 4, path: "/instructor", name: "Instructor" },
+  { id: 1, path: "/", name: "home" },
+  { id: 2, path: "/about", name: "about" },
+  { id: 3, path: "/training", name: "training" },
+  { id: 4, path: "/instructor", name: "instructor" },
 ];
 
 export const socialLinks = [
