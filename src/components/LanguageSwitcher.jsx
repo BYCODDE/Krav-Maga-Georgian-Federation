@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import i18n from "i18next";
 import { FaGlobe } from "react-icons/fa";
 
@@ -57,9 +57,7 @@ const LanguageSwitcher = () => {
               }`}
             >
               <span className="text-white">{lang.flag}</span>
-              <span className="hidden sm:inline text-white">
-                {lang.label}
-              </span>
+              <span className="hidden sm:inline text-white">{lang.label}</span>
             </button>
           ))}
         </div>

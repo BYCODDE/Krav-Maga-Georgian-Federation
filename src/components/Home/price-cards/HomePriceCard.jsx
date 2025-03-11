@@ -1,30 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useGetHomePriceCards } from "../../../hooks/useGetHomePriceCards";
+
 import ErrorDisplay from "../../ErrorDisplay";
 import PriceCardsContent from "./PriceCardsContent";
 import { PriceCardsContentSkeleton } from "./PriceCardsSkeleton";
 import ModalPortal from "../../ModalPortal";
 import SignUpModal from "./SignUpModal";
+import { LanguageContext } from "../../../contexts/LanguageContext";
 
 function HomePriceCard() {
   const { data, isError, isLoading, error } = useGetHomePriceCards();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [language, setLanguage] = useState(
-    localStorage.getItem("i18nextLng") || "en"
-  );
-
-  useEffect(() => {
-    const checkLanguageChange = () => {
-      const newLanguage = localStorage.getItem("i18nextLng") || "en";
-      if (newLanguage !== language) {
-        setLanguage(newLanguage);
-      }
-    };
-
-    const interval = setInterval(checkLanguageChange, 0);
-
-    return () => clearInterval(interval);
-  }, [language]);
+  const { language } = useContext(LanguageContext);
 
   if (isLoading) {
     return <PriceCardsContentSkeleton />;
@@ -46,12 +33,12 @@ function HomePriceCard() {
         {data.map((card) => (
           <PriceCardsContent
             key={card.id}
-            description={card.description[language] || card.description.en}
-            instructor={card.instructor[language] || card.instructor.en}
-            location={card.location[language] || card.location.en}
+            description={card.description[language]}
+            instructor={card.instructor[language]}
+            location={card.location[language]}
             img={card.img}
-            main_title={card.main_title[language] || card.main_title.en}
-            timing={card.timing[language] || card.timing.en}
+            main_title={card.main_title[language]}
+            timing={card.timing[language]}
             price={card.price}
             setIsModalOpen={setIsModalOpen}
             isModalOpen={isModalOpen}

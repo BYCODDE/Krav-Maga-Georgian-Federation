@@ -1,13 +1,13 @@
-import React from "react";
 import { useGetFeedback } from "../../hooks/useGetFeetback";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 
 export default function FeedbackBox() {
   const { data, isLoading, isError, error } = useGetFeedback();
-  console.log(data, "esaa");
+  const {t} = useTranslation();
 
   if (isLoading) return <p className="text-center text-gray-600">Loading...</p>;
   if (isError)
@@ -16,10 +16,14 @@ export default function FeedbackBox() {
   return (
     <div className="p-6 md:p-10 bg-[#A9A9A9]">
       <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 md:mb-6">
-        Join the Krav Maga Community
+        {t("feedback_join", {
+          defaultValue: "Join the Krav Maga Community",
+        })}
       </h2>
       <p className="text-center text-base md:text-lg text-gray-600 mb-8 md:mb-10">
-        Connect with passionate practitioners worldwide
+        {t("feedback_connect", {
+          defaultValue: " Connect with passionate practitioners worldwide",
+        })}
       </p>
 
       <div className="relative overflow-hidden">
