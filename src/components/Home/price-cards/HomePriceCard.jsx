@@ -33,12 +33,12 @@ function HomePriceCard() {
         {data.map((card) => (
           <PriceCardsContent
             key={card.id}
-            description={card.description[language] || card.description.en}
-            instructor={card.instructor[language] || card.instructor.en}
-            location={card.location[language] || card.location.en}
+            description={card.description[language]}
+            instructor={card.instructor[language]}
+            location={card.location[language]}
             img={card.img}
-            main_title={card.main_title[language] || card.main_title.en}
-            timing={card.timing[language] || card.timing.en}
+            main_title={card.main_title[language]}
+            timing={card.timing[language]}
             price={card.price}
             setIsModalOpen={setIsModalOpen}
             isModalOpen={isModalOpen}

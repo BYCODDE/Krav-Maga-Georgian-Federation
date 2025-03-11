@@ -3,11 +3,12 @@ import { useGetInstructorCards } from "../../../hooks/useGetInstructorInfo";
 import SkeletonInsturctor from "../instructorCard/SkeletonInsturctor";
 import ErrorDisplay from "../../ErrorDisplay";
 import { LanguageContext } from "../../../contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 export default function InstructorCard() {
   const { data, isLoading, isError, error } = useGetInstructorCards();
     const { language } = useContext(LanguageContext);
-
+const {t} = useTranslation();
 
   if (isLoading) {
     return <SkeletonInsturctor />;
@@ -20,7 +21,7 @@ export default function InstructorCard() {
   return (
     <div className="flex flex-col bg-[#161616]">
       <h1 className="text-white font-bold text-center py-[20px] text-2xl">
-        Meet Our Instructor
+        {t("instructor_header", { defaultValue: "Our Instructor" })}
       </h1>
       <div className="flex justify-center px-[20px] py-[50px]">
         <div className="w-72 p-6 bg-[#383838] rounded-xl shadow-lg text-white">
