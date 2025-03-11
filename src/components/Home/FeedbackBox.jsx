@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useGetFeedback } from "../../hooks/useGetFeetback";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

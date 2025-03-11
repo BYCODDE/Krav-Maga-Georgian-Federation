@@ -1,30 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useGetHomePriceCards } from "../../../hooks/useGetHomePriceCards";
+
 import ErrorDisplay from "../../ErrorDisplay";
 import PriceCardsContent from "./PriceCardsContent";
 import { PriceCardsContentSkeleton } from "./PriceCardsSkeleton";
 import ModalPortal from "../../ModalPortal";
 import SignUpModal from "./SignUpModal";
+import { LanguageContext } from "../../../contexts/LanguageContext";
 
 function HomePriceCard() {
   const { data, isError, isLoading, error } = useGetHomePriceCards();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [language, setLanguage] = useState(
-    localStorage.getItem("i18nextLng") || "en"
-  );
-
-  useEffect(() => {
-    const checkLanguageChange = () => {
-      const newLanguage = localStorage.getItem("i18nextLng") || "en";
-      if (newLanguage !== language) {
-        setLanguage(newLanguage);
-      }
-    };
-
-    const interval = setInterval(checkLanguageChange, 0);
-
-    return () => clearInterval(interval);
-  }, [language]);
+  const { language } = useContext(LanguageContext);
 
   if (isLoading) {
     return <PriceCardsContentSkeleton />;
