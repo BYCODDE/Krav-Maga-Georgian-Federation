@@ -4,48 +4,52 @@ import SkeletonInsturctor from "../instructorCard/SkeletonInsturctor";
 import ErrorDisplay from "../../ErrorDisplay";
 import { LanguageContext } from "../../../contexts/LanguageContext";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 
 export default function InstructorCard() {
   const { data, isLoading, isError, error } = useGetInstructorCards();
   const { language } = useContext(LanguageContext);
   const { t } = useTranslation();
 
-  if (isLoading) return <SkeletonInsturctor />;
-  if (isError) return <ErrorDisplay ErrorMsg={error.message} />;
+  if (isLoading) {
+    return <SkeletonInsturctor />;
+  }
+
+  if (isError) {
+    return <ErrorDisplay ErrorMsg={error.message} />;
+  }
 
   return (
-    <div className="bg-[#161616] px-6 py-12">
-      <h1 className="text-white font-bold text-center text-3xl mb-10">
-        {t("instructor_header", { defaultValue: "Our Instructors" })}
+    <div className="flex flex-col bg-[#161616]">
+      <h1 className="text-white font-bold text-center py-[20px] text-2xl">
+        {t("instructor_header", { defaultValue: "Our Instructor" })}
       </h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {data.map((instructor, index) => (
-          <motion.div
-            key={index}
-            className="bg-[#383838] p-6 rounded-xl shadow-lg text-white text-center transform transition-all hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }} // Fixed delay calculation
-          >
-            <img
-              src={instructor.img}
-              alt="Instructor"
-              className="w-32 h-32 mx-auto rounded-full object-cover object-top border-2 border-gray-400"
-            />
-            <h2 className="mt-4 text-xl font-semibold">{instructor.name[language]}</h2>
-            <p className="mt-2 text-sm text-gray-300">{instructor.about_instructor[language]}</p>
-
-            <div className="mt-4 text-[14px] text-gray-400 space-y-1">
-              <p>{instructor.award_first[language]}</p>
-              <p>{instructor.award_second[language]}</p>
-              <p>{instructor.award_third[language]}</p>
-              <p>{instructor.award_fourth[language]}</p>
-              <p>{instructor.award_fifth[language]}</p>
-            </div>
-          </motion.div>
-        ))}
+      <div className="px-[20px] py-[50px] flex">
+        <div className="w-1/2 flex justify-center">
+          <img
+            src={data[0].img}
+            alt="Instructor"
+            className="w-[300px] h-[400px] object-cover object-top"
+          />
+        </div>
+        <div className="w-1/2 pl-[20px]">
+          <h2 className="mt-3 text-lg font-semibold text-gray-300">
+            {data[0].about_instructor[language]}
+          </h2>
+          <h2 className="text-[15px] font-bold  text-gray-300">
+            {data[0].name[language]}
+          </h2>
+          <div className="mt-2 text-gray-300">
+            {data.map((instructor, index) => (
+              <div key={index}>
+                <p>{instructor.award_fifth[language]}</p>
+                <p>{instructor.award_second[language]}</p>
+                <p>{instructor.award_third[language]}</p>
+                <p>{instructor.award_fourth[language]}</p>
+                <p>{instructor.award_fifth[language]}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { useGetAboutKravmaga } from "../../hooks/useGetAboutKravmaga";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import GalleryKravmaga from "./GalleryKravmaga";
+import VideoKrav from "./VideoKrav";
 
 export default function KravmagaAbout() {
   const { language } = useContext(LanguageContext);
@@ -47,6 +48,7 @@ export default function KravmagaAbout() {
         </motion.div>
       ))}
       <GalleryKravmaga data={data}/>
+      <VideoKrav/>
     </div>
   );
 }
