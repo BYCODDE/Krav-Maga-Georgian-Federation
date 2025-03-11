@@ -14,12 +14,12 @@ function PriceCardsContent({
   const { t } = useTranslation();
 
   return (
-    <div className="bg-[#A9A9A9] w-full h-fit max-w-[400px] p-4 rounded-3xl my-5">
+    <div className="bg-[#A9A9A9] w-full h-fit max-w-[400px] min-h-[400px] p-4 rounded-3xl my-5">
       <div>
         <img
           src={img}
           alt="img"
-          className="h-[150px] w-full rounded-3xl bg-no-repeat object-cover object-center"
+          className="h-[150px] w-full rounded-3xl bg-no-repeat object-cover object-top"
         />
       </div>
       <div className="text-white flex flex-col gap-2 pt-2">
@@ -35,7 +35,7 @@ function PriceCardsContent({
           {t("Instructor")}: {instructor}
         </h3>
       </div>
-      <div className="pt-3 flex items-center justify-between gap-3">
+      <div className="pt-3 flex items-center justify-between gap-3 ">
         <button
           onClick={() => setIsModalOpen(() => !isModalOpen)}
           className="bg-white text-black py-2 px-3 rounded-2xl text-xs"

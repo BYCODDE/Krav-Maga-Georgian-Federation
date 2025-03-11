@@ -24,7 +24,7 @@ export default function InstructorCard() {
           <img
             src={data[0].img}
             alt="Instructor"
-            className="w-32 h-32 mx-auto rounded-full object-cover"
+            className="w-32 h-32 mx-auto rounded-full object-cover object-top"
           />
           <h2 className="mt-3 text-lg text-center font-semibold">
             {data[0].about_instructor.en}
