@@ -1,18 +1,32 @@
 import React from "react";
+import YouTube from "react-youtube";
 
-export default function VideoKrav() {
+const VideoKrav = () => {
+  const videoId = "2x5fesVWhoE"; 
+
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 0,
+      controls: 1,
+      modestbranding: 1,
+      rel: 0,
+      disablekb: 1,
+      showinfo: 0,
+      fs: 1,
+    },
+  };
+
+  const onReady = (event) => {
+    event.target.playVideo();
+  };
+
   return (
-    <div className="flex justify-center items-center  mt-[4rem] animate-fadeIn">
-      <div className="text-center">
-        <h2 className="text-2xl text-white font-semibold mb-4">Video</h2>
-        <iframe
-          className="w-[800px] h-[450px] rounded-lg"
-          src="https://www.youtube.com/embed/2x5fesVWhoE"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+    <div className="flex justify-center items-center h-screen">
+      <YouTube videoId={videoId} opts={opts} onReady={onReady} />
     </div>
   );
-}
+};
+
+export default VideoKrav;

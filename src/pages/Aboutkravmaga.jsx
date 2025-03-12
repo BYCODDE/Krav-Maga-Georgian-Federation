@@ -1,7 +1,7 @@
 import KravmagaAbout from "../components/AboutKravmaga/KravmagaAbout";
 
 function Aboutkravmaga() {
-  return <div><KravmagaAbout/></div>;
+  return <><KravmagaAbout/></>;
 }
 
 export default Aboutkravmaga;
