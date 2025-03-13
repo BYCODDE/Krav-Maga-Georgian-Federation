@@ -2,11 +2,11 @@ import React from "react";
 import YouTube from "react-youtube";
 
 const VideoKrav = () => {
-  const videoId = "2x5fesVWhoE"; 
+  const videoId = "2x5fesVWhoE";
 
   const opts = {
     height: "390",
-    width: "640",
+    width: "100%",
     playerVars: {
       autoplay: 0,
       controls: 1,
@@ -23,7 +23,7 @@ const VideoKrav = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div>
       <YouTube videoId={videoId} opts={opts} onReady={onReady} />
     </div>
   );
