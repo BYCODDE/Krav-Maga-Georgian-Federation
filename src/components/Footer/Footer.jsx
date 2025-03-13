@@ -7,8 +7,8 @@ function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="w-full mt-4">
-      <div className="flex flex-row justify-between items-start gap-8">
+    <footer className="w-full p-[20px] bg-[#A9A9A9] border-t border-white">
+      <div className="flex flex-row  justify-between items-start gap-8">
         <div className="flex flex-col gap-[20px]">
           <ReusableTitle img_src={"mainLogo.png"} h1_text={t("krav")} />
           {footerInfo.map((info) => (

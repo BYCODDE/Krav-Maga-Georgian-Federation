@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 
 function Layout({ children }) {
   return (
-    <div className="bg-mainColor">
+    <div className="">
       <MainContentWrapper>
         <Header />
         <main>{children}</main>
