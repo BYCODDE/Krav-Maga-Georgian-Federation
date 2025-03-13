@@ -29,7 +29,7 @@ function HomePriceCard() {
           ? "ხელმისაწვდომი კლასები"
           : "Available Classes"}
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-[70vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-[70vh] justify-items-center">
         {data.map((card) => (
           <PriceCardsContent
             key={card.id}
@@ -39,7 +39,7 @@ function HomePriceCard() {
             img={card.img}
             main_title={card.main_title[language]}
             timing={card.timing[language]}
-            price={card.price}
+            price={card.price[language]}
             setIsModalOpen={setIsModalOpen}
             isModalOpen={isModalOpen}
           />

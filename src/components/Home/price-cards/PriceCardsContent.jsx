@@ -14,7 +14,7 @@ function PriceCardsContent({
   const { t } = useTranslation();
 
   return (
-    <div className="bg-[#A9A9A9] w-full  max-w-[400px] h-[460px] sm:h-[450px] p-4 rounded-3xl my-5 shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105">
+    <div className="bg-[#A9A9A9] w-full  max-w-[400px] h-auto  sm:h-[450px] p-4 rounded-3xl my-5 shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105">
       <div>
         <img
           src={img}
@@ -42,7 +42,7 @@ function PriceCardsContent({
         >
           Sign up
         </button>
-        <h2 className="text-white font-bold">{price} GEL</h2>
+        <h2 className="text-white font-bold">{price} </h2>
       </div>
     </div>
   );
