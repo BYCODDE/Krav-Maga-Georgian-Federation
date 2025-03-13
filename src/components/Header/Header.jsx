@@ -7,7 +7,7 @@ import LanguageSwitcher from "../LanguageSwitcher";
 function Header() {
   const { t } = useTranslation();
   return (
-    <header className="flex flex-row justify-between items-center  w-full mb-4">
+    <header className="flex  p-[20px]  bg-[#A9A9A9] flex-row justify-between items-center  w-full ">
       <ReusableTitle
         img_src={"mainLogo.png"}
         h1_text={t("krav", { defaultValue: "Krav Maga Georgian Federation" })}
