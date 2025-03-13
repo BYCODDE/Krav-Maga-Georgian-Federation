@@ -1,4 +1,4 @@
-import InstructorCard from "../components/Instructor/instructorcard/InstructorCard";
+import InstructorCard from "../components/Instructor/instructorCard/InstructorCard";
 
 function Instructor() {
   return (
