@@ -40,7 +40,7 @@ function PriceCardsContent({
           onClick={() => setIsModalOpen(() => !isModalOpen)}
           className="bg-white text-black py-2 px-3 rounded-2xl text-xs transition-all duration-300 hover:bg-gray-200"
         >
-          Sign up
+          {t("Sign_Up", { defaultValue: "Sign Up" })}
         </button>
         <h2 className="text-white font-bold">{price} </h2>
       </div>
