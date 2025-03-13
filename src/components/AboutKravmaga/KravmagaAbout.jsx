@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import GalleryKravmaga from "./GalleryKravmaga";
 import VideoKrav from "./VideoKrav";
 import Sketetons from "./Sketetons";
+import ErrorDisplay from "../ErrorDisplay";
 export default function KravmagaAbout() {
   const { language } = useContext(LanguageContext);
   const { data, isLoading, isError, error } = useGetAboutKravmaga();
 
   if (isLoading) return <div className="text-center text-white py-10"><Sketetons/></div>;
-  if (isError) return <div className="text-center text-red-500 py-10">Error: {error.message}</div>;
+  if (isError) return <div className="text-center text-red-500 py-10"><ErrorDisplay/></div>;
 
   return (
     <div className="bg-[#161616] px-6 py-12">
