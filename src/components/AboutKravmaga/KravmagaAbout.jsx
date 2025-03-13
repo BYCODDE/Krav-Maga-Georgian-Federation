@@ -11,7 +11,7 @@ export default function KravmagaAbout() {
   const { data, isLoading, isError, error } = useGetAboutKravmaga();
 
   if (isLoading) return <div className="text-center text-white py-10"><Sketetons/></div>;
-  if (isError) return <div className="text-center text-red-500 py-10"><ErrorDisplay/></div>;
+  if (isError) return <div className="text-center text-red-500 py-10"><ErrorDisplay ErrorMsg={error.message} /></div>;
 
   return (
     <div className="bg-[#161616] px-6 py-12">
