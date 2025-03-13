@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
+
 function ModalForm({ handleClose, handleSubmit }) {
+  const { t } = useTranslation();
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
       <div className="bg-white rounded-lg p-8 max-w-sm w-full shadow-lg relative">
@@ -8,14 +12,16 @@ function ModalForm({ handleClose, handleSubmit }) {
         >
           <span className="text-2xl">&times;</span>
         </button>
-        <h2 className="text-2xl font-semibold text-center mb-6">Sign Up</h2>
+        <h2 className="text-2xl font-semibold text-center mb-6">
+          {t("Sign_Up", { defaultValue: "Sign Up" })}
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-700"
             >
-              Name
+              {t("Name", { defaultValue: "Name" })}
             </label>
             <input
               type="text"
@@ -31,7 +37,7 @@ function ModalForm({ handleClose, handleSubmit }) {
               htmlFor="surname"
               className="block text-sm font-medium text-gray-700"
             >
-              Surname
+              {t("Surname", { defaultValue: "Surname" })}
             </label>
             <input
               type="text"
@@ -47,7 +53,7 @@ function ModalForm({ handleClose, handleSubmit }) {
               htmlFor="age"
               className="block text-sm font-medium text-gray-700"
             >
-              Age
+              {t("Age", { defaultValue: "Age" })}
             </label>
             <input
               type="number"
@@ -63,7 +69,7 @@ function ModalForm({ handleClose, handleSubmit }) {
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700"
             >
-              Phone
+              {t("Phone", { defaultValue: "Phone" })}
             </label>
             <input
               type="tel"
@@ -78,7 +84,7 @@ function ModalForm({ handleClose, handleSubmit }) {
             type="submit"
             className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Sign Up
+            {t("Sign_Up", { defaultValue: "Sign Up" })}
           </button>
         </form>
       </div>

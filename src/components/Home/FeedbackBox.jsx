@@ -15,7 +15,7 @@ export default function FeedbackBox() {
 
   return (
     <div className="p-6 md:p-10 bg-[#A9A9A9]">
-      <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 md:mb-6">
+      <h2 className="text-center text-2xl md:text-4xl font-extrabold text-gray-800 mb-4 md:mb-6">
         {t("feedback_join", {
           defaultValue: "Join the Krav Maga Community",
         })}

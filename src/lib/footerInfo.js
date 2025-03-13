@@ -15,7 +15,7 @@ export const footerInfo = [
 export const navLinksArray = [
   { id: 1, path: "/", name: "home" },
   { id: 2, path: "/about", name: "about" },
-  { id: 3, path: "/training", name: "training" },
+  // { id: 3, path: "/training", name: "training" },
   { id: 4, path: "/instructor", name: "instructor" },
 ];
 

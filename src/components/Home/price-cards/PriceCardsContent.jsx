@@ -14,7 +14,7 @@ function PriceCardsContent({
   const { t } = useTranslation();
 
   return (
-    <div className="bg-[#A9A9A9] w-full  max-w-[400px] h-auto  sm:h-[450px] p-4 rounded-3xl my-5 shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105">
+    <div className="bg-[#A9A9A9] w-full  max-w-[400px] h-auto  p-4 rounded-3xl my-5 ">
       <div>
         <img
           src={img}

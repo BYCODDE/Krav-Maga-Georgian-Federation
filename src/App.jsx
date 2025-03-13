@@ -7,7 +7,7 @@ import {
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import Aboutkravmaga from "./pages/Aboutkravmaga";
-import Training from "./pages/Training";
+// import Training from "./pages/Training";
 import Instructor from "./pages/Instructor";
 import { LanguageProvider } from "./contexts/LanguageContext.jsx";
 
@@ -22,7 +22,7 @@ const routes = [
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <Aboutkravmaga /> },
-      { path: "/training", element: <Training /> },
+      // { path: "/training", element: <Training /> },
       { path: "/instructor", element: <Instructor /> },
     ],
   },
