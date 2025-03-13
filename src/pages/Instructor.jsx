@@ -1,10 +1,10 @@
-import InstructorCard from "../components/Instructor/instructorCard/InstructorCard";
+import InstructorCard from "../components/Instructor/InstructorCard";
 
 function Instructor() {
   return (
-    <div>
+    <>
       <InstructorCard />
-    </div>
+    </>
   );
 }
 

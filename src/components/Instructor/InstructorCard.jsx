@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { useGetInstructorCards } from "../../../hooks/useGetInstructorInfo";
-import SkeletonInsturctor from "../instructorCard/SkeletonInsturctor";
-import ErrorDisplay from "../../ErrorDisplay";
-import { LanguageContext } from "../../../contexts/LanguageContext";
+import { useGetInstructorCards } from "../../hooks/useGetInstructorInfo";
+import SkeletonInsturctor from "./SkeletonInsturctor";
+import ErrorDisplay from "../ErrorDisplay";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
