@@ -2,7 +2,7 @@ import { useGetFeedback } from "../../../hooks/useGetFeetback";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from "../../../contexts/LanguageContext";
 import { useContext } from "react";
@@ -30,9 +30,8 @@ export default function FeedbackBox() {
         })}
       </p>
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden ">
         <Swiper
-          modules={[Pagination]}
           className="mySwiper"
           spaceBetween={20}
           slidesPerView={1}

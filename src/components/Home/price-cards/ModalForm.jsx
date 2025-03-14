@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 function ModalForm({ handleClose, handleSubmit }) {
   const { t } = useTranslation();
   return (
-    <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+    <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex justify-center items-center">
       <div className="bg-white rounded-lg p-8 max-w-sm w-full shadow-lg relative">
         <button
           onClick={handleClose}

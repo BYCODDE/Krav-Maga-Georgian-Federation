@@ -45,11 +45,11 @@ function HomePriceCard() {
           />
         ))}
       </div>
-      {isModalOpen && (
+      {isModalOpen ? (
         <ModalPortal>
           <SignUpModal setIsModalOpen={setIsModalOpen} />
         </ModalPortal>
-      )}
+      ) : null}
     </div>
   );
 }
