@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { useGetPartners } from "../../hooks/useGetPartners";
-import ErrorDisplay from "../ErrorDisplay";
-import { LanguageContext } from "../../contexts/LanguageContext";
+import { useGetPartners } from "../../../hooks/useGetPartners";
+import ErrorDisplay from "../../ErrorDisplay";
+import { LanguageContext } from "../../../contexts/LanguageContext";
 import PartnersBannerSkeleton from "./PartnersBannerSkeleton";
 
 function PartnersBanner() {

@@ -1,8 +1,8 @@
 import React from "react";
-import { useGetHeroImage } from "../../hooks/useGetHeroImage";
+import { useGetHeroImage } from "../../../hooks/useGetHeroImage";
 import { useTranslation } from "react-i18next";
 import HeroImageSkeleton from "./HeroImageSkeleton";
-import ErrorDisplay from "../ErrorDisplay";
+import ErrorDisplay from "../../ErrorDisplay";
 
 const HeroImage = () => {
   const { data, error, isError, isLoading } = useGetHeroImage();

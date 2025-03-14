@@ -1,13 +1,13 @@
-import { useGetFeedback } from "../../hooks/useGetFeetback";
+import { useGetFeedback } from "../../../hooks/useGetFeetback";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useTranslation } from "react-i18next";
-import { LanguageContext } from "../../contexts/LanguageContext";
+import { LanguageContext } from "../../../contexts/LanguageContext";
 import { useContext } from "react";
 import FeedbackBoxSkeleton from "./FeedbackBoxSkeleton";
-import ErrorDisplay from "../ErrorDisplay";
+import ErrorDisplay from "../../ErrorDisplay";
 
 export default function FeedbackBox() {
   const { data, isLoading, isError, error } = useGetFeedback();
