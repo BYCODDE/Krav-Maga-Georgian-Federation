@@ -1,13 +1,15 @@
 import React from "react";
 import { useGetHeroImage } from "../../hooks/useGetHeroImage";
 import { useTranslation } from "react-i18next";
+import HeroImageSkeleton from "./HeroImageSkeleton";
+import ErrorDisplay from "../ErrorDisplay";
 
 const HeroImage = () => {
   const { data, error, isError, isLoading } = useGetHeroImage();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
-  if (isLoading) return <p>Loading</p>;
-  if (isError) return <p>{error.message}</p>;
+  if (isLoading) return <HeroImageSkeleton />;
+  if (isError) return <ErrorDisplay ErrorMsg={error.message}></ErrorDisplay>;
 
   return (
     <div
@@ -20,9 +22,6 @@ const HeroImage = () => {
             defaultValue: "Enhance your skills and master Krav Maga techniques",
           })}
         </h1>
-        <button className="mt-6 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition">
-          Get Started
-        </button>
       </div>
     </div>
   );

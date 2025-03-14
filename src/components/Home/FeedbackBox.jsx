@@ -6,15 +6,16 @@ import { Pagination } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { useContext } from "react";
+import FeedbackBoxSkeleton from "./FeedbackBoxSkeleton";
+import ErrorDisplay from "../ErrorDisplay";
 
 export default function FeedbackBox() {
   const { data, isLoading, isError, error } = useGetFeedback();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const { language } = useContext(LanguageContext);
 
-  if (isLoading) return <p className="text-center text-gray-600">Loading...</p>;
-  if (isError)
-    return <p className="text-center text-red-500">{error.message}</p>;
+  if (isLoading) return <FeedbackBoxSkeleton />;
+  if (isError) return <ErrorDisplay ErrorMsg={error.message} />;
 
   return (
     <div className="p-6 md:p-10 bg-[#A9A9A9]">

@@ -6,7 +6,6 @@ import PartnersBannerSkeleton from "./PartnersBannerSkeleton";
 
 function PartnersBanner() {
   const { data, isLoading, isError, error } = useGetPartners();
-console.log(data);
 
   const { language } = useContext(LanguageContext);
   if (isLoading) return <PartnersBannerSkeleton />;

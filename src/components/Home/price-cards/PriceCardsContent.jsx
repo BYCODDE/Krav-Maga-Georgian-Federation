@@ -14,7 +14,7 @@ function PriceCardsContent({
   const { t } = useTranslation();
 
   return (
-    <div className="bg-[#A9A9A9] w-full  max-w-[400px] h-auto  p-4 rounded-3xl my-5 ">
+    <div className="bg-[#A9A9A9] w-full max-w-[400px] p-4 rounded-3xl my-3 xl:max-h-[450px] flex flex-col justify-between">
       <div>
         <img
           src={img}
@@ -35,14 +35,14 @@ function PriceCardsContent({
           {t("Instructor")}: {instructor}
         </h3>
       </div>
-      <div className="pt-3 flex items-center justify-between gap-3 ">
+      <div className="pt-3 flex items-center justify-between gap-3 mt-auto">
         <button
           onClick={() => setIsModalOpen(() => !isModalOpen)}
           className="bg-white text-black py-2 px-3 rounded-2xl text-xs transition-all duration-300 hover:bg-gray-200"
         >
           {t("Sign_Up", { defaultValue: "Sign Up" })}
         </button>
-        <h2 className="text-white font-bold">{price} </h2>
+        <h2 className="text-white font-bold text-lg">{price}</h2>
       </div>
     </div>
   );

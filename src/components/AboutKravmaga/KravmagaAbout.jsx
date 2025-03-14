@@ -4,14 +4,14 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import GalleryKravmaga from "./GalleryKravmaga";
 import VideoKrav from "./VideoKrav";
-import Sketetons from "./Sketetons";
+import Skeletons from "./Skeletons";
 import ErrorDisplay from "../ErrorDisplay";
 export default function KravmagaAbout() {
   const { language } = useContext(LanguageContext);
   const { data, isLoading, isError, error } = useGetAboutKravmaga();
 
-  if (isLoading) return <div className="text-center text-white py-10"><Sketetons/></div>;
-  if (isError) return <div className="text-center text-red-500 py-10"><ErrorDisplay ErrorMsg={error.message} /></div>;
+  if (isLoading) return <Skeletons />;
+  if (isError) return <ErrorDisplay ErrorMsg={error.message} />;
 
   return (
     <div className="bg-[#161616] px-6 py-12">
