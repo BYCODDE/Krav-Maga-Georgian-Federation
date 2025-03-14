@@ -17,7 +17,7 @@ const HeroImage = () => {
       style={{ backgroundImage: `url("${data[0].img}")` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="text-[34px] md:text-6xl font-bold">
+        <h1 className="text-[32px] md:text-6xl font-bold">
           {t("hero_cover", {
             defaultValue: "Enhance your skills and master Krav Maga techniques",
           })}

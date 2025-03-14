@@ -22,7 +22,7 @@ function Footer() {
         <div className="flex flex-col items-center md:block md:flex-row md:items-start">
           <h3
             className={
-              "font-bebas md:text-left text-[15px] lg:text-xl font-bold mb-4 text-center"
+              "font-bebas md:text-left md:text-[15px] text-[11px] lg:text-xl font-bold mb-4 text-center "
             }
           >
             {t("followUs")}
