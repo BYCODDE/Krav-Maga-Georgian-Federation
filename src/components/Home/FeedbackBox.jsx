@@ -4,10 +4,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useTranslation } from "react-i18next";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import { useContext } from "react";
 
 export default function FeedbackBox() {
   const { data, isLoading, isError, error } = useGetFeedback();
   const {t} = useTranslation();
+  const { language } = useContext(LanguageContext);
 
   if (isLoading) return <p className="text-center text-gray-600">Loading...</p>;
   if (isError)
@@ -63,10 +66,10 @@ export default function FeedbackBox() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-semibold text-gray-900 truncate">
-                      {feedback.user_name.en}
+                      {feedback.user_name[language]}
                     </h3>
                     <p className="text-gray-500 text-sm overflow-y-auto max-h-20 break-words">
-                      {feedback.review.en}
+                      {feedback.review[language]}
                     </p>
                   </div>
                 </div>
