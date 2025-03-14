@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { navLinksArray } from "../lib/footerInfo";
+import { navLinksArray } from "../../lib/footerInfo";
 import { useTranslation } from "react-i18next";
 
 const NavLinks = ({ toggleMenu, variant }) => {

@@ -1,4 +1,4 @@
-import NavLinks from "../Navlinks";
+import NavLinks from "./NavLinks";
 
 function Navbar() {
   return (

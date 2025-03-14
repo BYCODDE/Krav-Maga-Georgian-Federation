@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import NavLinks from "../components/Navlinks";
+import NavLinks from "../components/Navbar/NavLinks";
 
 function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
