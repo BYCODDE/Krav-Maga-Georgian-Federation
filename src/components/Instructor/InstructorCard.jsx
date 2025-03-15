@@ -10,7 +10,6 @@
     const { data, isLoading, isError, error } = useGetInstructorCards();
     const { language } = useContext(LanguageContext);
     const { t } = useTranslation();
-    console.log(data);
 
 
     if (isLoading) {
@@ -22,7 +21,7 @@
     }
 
     return (
-      <div className="flex flex-col bg-[#161616]">
+      <div className="flex flex-col bg-[#161616] ">
         <motion.h1
           className="text-white font-bold text-center py-[20px] text-2xl"
           initial={{ opacity: 0 }}
@@ -32,7 +31,7 @@
           {t("instructor_header", { defaultValue: "Our Instructor" })}
         </motion.h1>
 
-        <div className="px-[20px] py-[50px] flex flex-col md:flex-row">
+        <div className="px-[20px] py-[50px] flex flex-col md:flex-row min-h-[70vh]">
           <motion.div
             className="w-full md:w-1/2 flex justify-center mb-4 md:mb-0"
             initial={{ opacity: 0, x: -50 }}
@@ -42,7 +41,7 @@
             <img
               src={data.map((instructor) => instructor.img)}
               alt="Instructor"
-              className="w-[300px] h-[400px] object-cover object-top"
+              className="w-[300px] h-[600px] object-cover object-top"
             />
           </motion.div>
 
@@ -52,14 +51,14 @@
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mt-3 text-lg font-semibold text-gray-300">
+            <h2 className="mt-3 text-[25px] font-semibold text-gray-300">
               {data.map((instructor) => instructor.about_instructor[language])}
             </h2>
-            <h2 className="text-[15px] font-bold text-gray-300">
+            <h2 className="text-[23px] font-bold text-gray-300">
               {data.map((instructor_name) => instructor_name.name[language])}
             </h2>
 
-            <div className="mt-2 text-gray-300">
+            <div className="mt-2 text-gray-300 md:text-[20px]">
               {data.map((instructor) => (
                 <motion.div
                   key={instructor.name[language]}
