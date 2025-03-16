@@ -29,7 +29,7 @@ function HomePriceCard() {
           ? "ხელმისაწვდომი კლასები"
           : "Available Classes"}
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-[70vh] justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 min-h-[55vh] justify-items-center place-items-center">
         {data.map((card) => (
           <PriceCardsContent
             key={card.id}
