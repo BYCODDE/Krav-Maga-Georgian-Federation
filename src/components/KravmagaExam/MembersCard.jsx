@@ -8,15 +8,15 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import ErrorDisplay from "../ErrorDisplay";
-import SkeletonInstructor from "../Instructor/SkeletonInsturctor";
 import { useGetkravmagaExam } from "../../hooks/useGetkravmagaExam";
+import SkeletonLoader from "./SkeletonLoader";
 
 export default function MembersCard() {
   const { data, isLoading, isError, error } = useGetkravmagaExam();
   const { language } = useContext(LanguageContext);
   const { t } = useTranslation();
 
-  if (isLoading) return <SkeletonInstructor />;
+  if (isLoading) return <SkeletonLoader />;
   if (isError) return <ErrorDisplay ErrorMsg={error.message} />;
 
   return (
