@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import MembersCard from "../components/KravmagaExam/MembersCard";
 
 function KravmagaExam() {
   return (
-    <div>
-      <h1>Kravmaga Exam</h1>
-    </div>
-  )
+    <>
+      <MembersCard />
+    </>
+  );
 }
 
-export default KravmagaExam
+export default KravmagaExam;
