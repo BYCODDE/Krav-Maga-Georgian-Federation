@@ -70,11 +70,11 @@ export default function MembersCard() {
 
                 <div className="text-gray-400 text-center text-[18px]">
                   <p>
-                    {t("person_code", { defaultValue: "Person Code" })}:{" "}
+                    {t("person_code", { defaultValue: "Person Code" })}:
                     {member.person_code}
                   </p>
                   <p>
-                    {t("level", { defaultValue: "Level" })}:{" "}
+                    {t("level", { defaultValue: "Level" })}:
                     {member.level[language]}
                   </p>
                 </div>
