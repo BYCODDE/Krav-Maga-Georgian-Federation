@@ -15,13 +15,14 @@ export const footerInfo = [
 export const navLinksArray = [
   { id: 1, path: "/", name: "home" },
   { id: 2, path: "/about", name: "about" },
+  { id: 5, path: "/exam", name: "Krav Maga Exam" },
   { id: 4, path: "/instructor", name: "instructor" },
 ];
 
 export const socialLinks = [
   {
     id: 1,
-    url: "https://facebook.com",
+    url: "https://www.facebook.com/groups/1686844202090845",
     icon: FaFacebook,
     style: "px-3 py-1 lg:px-4 lg:py-2 text-2xl md:text-3xl hover:text-blue-600",
   },
@@ -40,7 +41,7 @@ export const socialLinks = [
   },
   {
     id: 4,
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/krav-maga-georgian-federation-8265b4352/",
     icon: FaLinkedin,
     style: "px-3 py-1 lg:px-4 lg:py-2 text-2xl md:text-3xl hover:text-blue-700",
   },

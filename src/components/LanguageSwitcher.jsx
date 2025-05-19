@@ -3,9 +3,9 @@ import i18n from "i18next";
 import { FaGlobe } from "react-icons/fa";
 
 const languages = [
-  { code: "en", flag: "en", label: "English" },
-  { code: "ka", flag: "ka", label: "ქართული" },
-  { code: "ru", flag: "🇷🇺", label: "Русский" },
+  { code: "en", flag: "EN", label: "English" },
+  { code: "ka", flag: "KA", label: "ქართული" },
+  { code: "ru", flag: "RU", label: "Русский" },
 ];
 
 const LanguageSwitcher = () => {

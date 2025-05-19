@@ -4,6 +4,7 @@
   "about": "About Krav Maga",
   "training": "Training",
   "instructor": "Instructor",
+  "Krav Maga Exam": "Krav Maga Exam",
   "gmail": "Gmail : BESOKHUTSISHVILI@YAHOO.COM",
   "phone": "Phone : (+995) 599-557-422",
   "address": "Address : 2 University St, Tbilisi",
@@ -19,5 +20,8 @@
   "Name": "Name",
   "Surname": "Surname",
   "Age": "Age",
-  "Phone": "Phone"
+  "Phone": "Phone",
+  "exam_description" : "On March 20, 2025, the first exam for the technical level of Krav Maga was held throughout Georgia, where members of the Federation and dignitaries participated.",
+  "person_code" : "Personal Code",
+  "exam_results_header" : "Exam Results"
 }

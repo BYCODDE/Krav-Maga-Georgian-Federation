@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Aboutkravmaga from "./pages/Aboutkravmaga";
 import Instructor from "./pages/Instructor";
 import { LanguageProvider } from "./contexts/LanguageContext.jsx";
+import KravmagaExam from "./pages/KravmagaExam.jsx";
 
 const routes = [
   {
@@ -22,6 +23,7 @@ const routes = [
       { path: "/", element: <Home /> },
       { path: "/about", element: <Aboutkravmaga /> },
       { path: "/instructor", element: <Instructor /> },
+      { path: "/exam", element: <KravmagaExam /> },
     ],
   },
 ];
