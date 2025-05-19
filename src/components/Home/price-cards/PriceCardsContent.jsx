@@ -6,10 +6,7 @@ function PriceCardsContent({
   timing,
   location,
   instructor,
-  price,
   img,
-  setIsModalOpen,
-  isModalOpen,
 }) {
   const { t } = useTranslation();
 
@@ -36,12 +33,9 @@ function PriceCardsContent({
         </h3>
       </div>
       <div className="pt-3 flex items-center justify-between gap-3 mt-auto">
-        <button
-          onClick={() => setIsModalOpen(!isModalOpen)}
-          className="bg-[#B22222] text-white py-2 px-3 rounded-2xl text-xs transition-all duration-300 hover:bg-[#8B0000]"
-        >
-          {t("Sign_Up", { defaultValue: "Sign Up" })}
-        </button>
+        <a href="tel:+995599557422" className="text-white">
+          {t("Phone")} : (+995) 599-557-422
+        </a>
       </div>
     </div>
   );

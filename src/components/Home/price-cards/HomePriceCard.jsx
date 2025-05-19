@@ -1,16 +1,12 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { useGetHomePriceCards } from "../../../hooks/useGetHomePriceCards";
-
 import ErrorDisplay from "../../ErrorDisplay";
 import PriceCardsContent from "./PriceCardsContent";
 import { PriceCardsContentSkeleton } from "./PriceCardsSkeleton";
-import ModalPortal from "../../ModalPortal";
-import SignUpModal from "./SignUpModal";
 import { LanguageContext } from "../../../contexts/LanguageContext";
 
 function HomePriceCard() {
   const { data, isError, isLoading, error } = useGetHomePriceCards();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const { language } = useContext(LanguageContext);
 
   if (isLoading) {
@@ -39,17 +35,9 @@ function HomePriceCard() {
             img={card.img}
             main_title={card.main_title[language]}
             timing={card.timing[language]}
-            price={card.price[language]}
-            setIsModalOpen={setIsModalOpen}
-            isModalOpen={isModalOpen}
           />
         ))}
       </div>
-      {isModalOpen ? (
-        <ModalPortal>
-          <SignUpModal setIsModalOpen={setIsModalOpen} />
-        </ModalPortal>
-      ) : null}
     </div>
   );
 }
